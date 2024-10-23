@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zzbnb-6563a38c-618f-48c0-ab15-46221fdfac9f-deployment
+  labels:
+    app: zzbnb-6563a38c-618f-48c0-ab15-46221fdfac9f
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zzbnb-6563a38c-618f-48c0-ab15-46221fdfac9f
+  template:
+    metadata:
+      labels:
+        app: zzbnb-6563a38c-618f-48c0-ab15-46221fdfac9f
+    spec:
+      containers:
+        - name: zzbnb-6563a38c-618f-48c0-ab15-46221fdfac9f-container
+          image: pipejet/lyna-zzbnb:0
+          ports:
+            - containerPort: 8080
